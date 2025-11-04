@@ -1,0 +1,23 @@
+@use '../../utils/' as *;
+
+.main-container{
+    top: var(--nav-top);
+    left: var(--sidebar-width);
+    right: 0;
+    padding-top: 21px;
+}
+
+.hero-container{
+    width: 800px;
+    background-color: #fff;
+    border-radius: 15px;
+    margin: 15px auto 30px;
+    padding: 40px;
+    & textarea{
+        height: 129px;
+        border: 1px solid var(--input-border-color);
+    }
+    & .form-select{
+       border: 1px solid var(--input-border-color);
+    }
+}

@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/fontawesome.min.css">
+    <link rel="stylesheet" href="assets/css/quill.snow.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="icon" type="image/png" href="/assets/img/Favicon.png">
+    <title>eBay HTML Template Builder</title>
+</head>
+
+<body>
+
+    <header>
+        <div class="container-fluid">
+            <div class="header d-flex justify-content-between align-items-center">
+                <div class="logo">
+                    <img src="assets/img/ebay-logo.png" alt="">
+                </div>
+                <div class="nav-menu">
+                    <div class="buttons">
+                        <button id="previewBtn" class="bttn ml-10"><i class="fal fa-eye"></i> Preview</button>
+                        <button id="copyBtn" class="bttn-white ml-10"><i class="fal fa-copy"></i> Code</button>
+                        <button id="downloadBtn" class="bttn-white ml-10"><i class="fal fa-download"></i> HTML</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="main-layout p-relative">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-2 gx-0">
+                        <aside>
+                            <div class="sidebar">
+                                <ul>
+                                    <li><a href="#"><i class="fal fa-home-lg-alt mr-8"></i> Home</a></li>
+                                    <li><a href="#"><i class="fal fa-book-open mr-8"></i> Documentation</a></li>
+                                </ul>
+                            </div>
+                        </aside>
+                    </div>
+                    <div class="col-md-10 gx-0">
+                        <div class="main-container p-absolute">
+                            <div class="hero-container mb-30">
+                                <div class="mb-3">
+                                    <label for="main-title" class="form-label">Title</label>
+                                    <input type="text" class="form-control" id="main-title">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="product-imageiURL" class="form-label">Product Image URL</label>
+                                    <div class="update d-flex justify-content-between align-items-center">
+                                        <input type="text" class="form-control" id="product-imageiURL">
+                                    </div>
+                                </div>
+                                <div class="mb-3 specification-area">
+                                    <div class="info-toast-area">
+                                        <div class="info-toast">
+                                            <p>Use a semicolon (;) at the end of each word or sentence. </p>
+                                            <i class="arrow"></i>
+                                        </div>
+                                        <i class="fal fa-info-circle info-toast-icon"></i>
+                                    </div>
+                                    <label for="specification" class="form-label title-label">Specification</label>
+                                    <textarea class="form-control" id="specification" rows="5"></textarea>
+                                </div>
+                                <div class="mb-3">
+                                    <div class="row">
+                                        <div class="col-md-4">
+                                            <label for="sku" class="form-label">SKU</label>
+                                            <input type="text" class="form-control" id="sku">
+                                        </div>
+                                        <div class="col-md-4">
+                                            <label for="vendor" class="form-label">Vendor</label>
+                                            <input type="text" class="form-control" id="vendor">
+                                        </div>
+                                        <div class="col-md-4">
+                                            <label for="condition" class="form-label">Condition</label>
+                                            <select id="condition" class="form-select"
+                                                aria-label="Default select example">
+                                                <option selected value="New">New</option>
+                                                <option value="Refurbished">Refurbished</option>
+                                                <option value="Used">Used</option>
+                                                <option value="Unboxed">Unboxed</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!----------------- Overview -------------------->
+                            <div class="hero-container">
+                                <h4 class="mb-8">Overview</h4>
+                                <div class="mb-3">
+                                    <label for="overview-heading" class="form-label">Overview Heading</label>
+                                    <input type="text" class="form-control" id="overview-heading" value="Overview">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="overview-editor" class="form-label">Information</label>
+                                    <div id="overview-editor" class="editor"></div>
+                                </div>
+                            </div>
+
+                            <!--------------- Label Information -------------->
+                            <div class="hero-container">
+                                <h4 class="mb-8">Label Information</h4>
+                                <div class="mb-3">
+                                    <label for="main-title" class="form-label">Label Heading</label>
+                                    <input type="text" class="form-control" id="label-heading"
+                                        value="Why doesn't my item have a label or sticker?">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="specification" class="form-label">Information</label>
+                                    <div id="label-editor" class="label-editor"></div>
+                                </div>
+                                <div class="mb-3">
+                                    <div class="update d-flex justify-content-between align-items-center">
+                                        <button id="resetLabelBtn" class="resetBtn">Reset to Default</button>
+                                        <!-- <div>
+                                            <button class="bttn thin-btn ml-10">Edit</button>
+                                            <button class="bttn-white thin-btn ml-10">Update</button>
+                                        </div> -->
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!--------------- Return & Refund policy Information -------------->
+                            <div class="hero-container">
+                                <h4 class="mb-8">Return & Refund policy</h4>
+                                <div class="mb-3">
+                                    <label for="main-title" class="form-label">Return Heading</label>
+                                    <input type="text" class="form-control" id="return-heading"
+                                        value="Return & Refund policy">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="main-title" class="form-label">Section Image URL</label>
+                                    <div class="update d-flex justify-content-between align-items-center">
+                                        <input type="text" class="form-control" id="returnImageURL"
+                                            value="https://i.postimg.cc/K8th1ZBZ/OBJECTS.png">
+                                    </div>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="specification" class="form-label">Information</label>
+                                    <div id="return-editor" class="return-editor"></div>
+                                </div>
+                                <div class="mb-3">
+                                    <div class="update d-flex justify-content-between align-items-center">
+                                        <button id="resetReturnBtn" class="resetBtn">Reset to Default</button>
+                                        <!-- <div>
+                                            <button class="bttn thin-btn ml-10">Edit</button>
+                                            <button class="bttn-white thin-btn ml-10">Update</button>
+                                        </div> -->
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!--------------- What about the Promise -------------->
+                            <div class="hero-container">
+                                <h4 class="mb-8">Our Promise</h4>
+                                <div class="mb-3">
+                                    <label for="main-title" class="form-label">Promise Heading</label>
+                                    <input type="text" class="form-control" id="promise-heading" value="Our promise">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="main-title" class="form-label">Section Image URL</label>
+                                    <div class="update d-flex justify-content-between align-items-center">
+                                        <input type="text" class="form-control" id="promiseImageURL"
+                                            value="https://i.postimg.cc/fTnPmWkr/promiss.png">
+                                    </div>
+                                </div>
+                                <div class="mb-3">
+                                    <div class="info-toast-area">
+                                        <div class="info-toast">
+                                            <p>Use a semicolon (;) at the end of each word or sentence. </p>
+                                            <i class="arrow"></i>
+                                        </div>
+                                        <i class="fal fa-info-circle info-toast-icon"></i>
+                                    </div>
+                                    <label for="specification" class="form-label">Information</label>
+                                    <div id="promise-editor" class="promise-editor"></div>
+                                </div>
+                                <div class="mb-3 d-flex justify-content-between align-items-center">
+                                    <button id="promiseReturnBtn" class="resetBtn">Reset to Default</button>
+                                    <!-- <div>
+                                        <button class="bttn thin-btn ml-10">Edit</button>
+                                        <button class="bttn-white thin-btn ml-10">Update</button>
+                                    </div> -->
+                                </div>
+                            </div>
+                            <!--------------- What about the warranty -------------->
+                            <div class="hero-container">
+                                <h4 class="mb-8">What about the warranty</h4>
+                                <div class="mb-3">
+                                    <label for="main-title" class="form-label">Warranty Heading</label>
+                                    <input type="text" class="form-control" id="warranty-heading"
+                                        value="What about the warranty?">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="specification" class="form-label">Information</label>
+                                    <div id="warranty-editor" class="warranty-editor"></div>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="main-title" class="form-label">Section Image URL</label>
+                                    <input type="text" class="form-control" id="warrantyImageURL"
+                                        value="https://i.postimg.cc/DzdytC73/warrenty.png">
+                                </div>
+                                <div class="mb-3">
+                                    <div class="update d-flex justify-content-between align-items-center">
+                                        <button id="resetWarrantyBtn" class="resetBtn">Reset to Default</button>
+                                        <!-- <div>
+                                            <button class="bttn thin-btn ml-10">Edit</button>
+                                            <button class="bttn-white thin-btn ml-10">Update</button>
+                                        </div> -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+
+
+
+
+
+
+
+
+    <script src="assets/js/jquery-3.7.1.min.js"></script>
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/quill.js"></script>
+    <script src="templates/datorpro-template.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,14 @@
+@use '../utils/' as *;
+
+.ql-toolbar {
+    border-top-left-radius: 10px !important; 
+    border-top-right-radius: 10px !important;
+    border-color: var(--input-border-color) !important;
+}
+
+.ql-container{
+     border-bottom-left-radius: 10px !important; 
+    border-bottom-right-radius: 10px !important;
+    border-color: var(--input-border-color) !important;
+    min-height: 100px;
+}

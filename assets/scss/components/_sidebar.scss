@@ -1,0 +1,32 @@
+@use '../utils/' as *;
+
+.sidebar{
+    background-color: var(--sidebar-color);
+    height: 100vh;
+    width: var(--sidebar-width);
+    display: block;
+    position: fixed;
+    top: var(--nav-top);
+    left: 0;
+    z-index: 1;
+    padding: 10px;
+    padding-top: 21px;
+    & ul{
+        & li{
+            display: flex;
+            justify-content: center;
+            flex-direction: column-reverse;
+            & a{
+                display: block;
+                color: #fff;
+                padding: 10px;
+                border-radius: 10px;
+                transition: all 0.3s;
+                &:hover{
+                     background-color: #fff;
+                     color: var(--sidebar-text-color);
+                }
+            }
+        }
+    }
+}

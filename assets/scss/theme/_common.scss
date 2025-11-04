@@ -1,0 +1,125 @@
+@use '../utils' as *;
+/*----------------------------------------*/
+/*  1.2 Common Classes
+/*----------------------------------------*/
+
+
+.w-img {
+	& img {
+		width: 100%;
+	}
+}
+
+.m-img {
+	& img {
+		max-width: 100%;
+	}
+}
+
+img {
+	max-width: 100%;
+}
+
+.fix {
+	overflow: hidden
+}
+
+.clear {
+	clear: both;
+}
+
+
+.overflow-y-visible {
+	overflow-x: hidden;
+	overflow-y: visible;
+}
+
+.overflow-x-visible {
+	overflow-x: visible;
+	overflow-y: hidden;
+}
+
+.p-relative {
+	position: relative;
+}
+
+.p-absolute {
+	position: absolute;
+}
+
+.bttn {
+	color: #fff;
+	padding: 10px 15px;
+	background-color: var(--button-color);
+	border-radius: 10px;
+
+	&-white {
+		background-color: var(--button-white-color);
+		color: var(--button-color);
+		padding: 10px 15px;
+		border-radius: 10px;
+	}
+}
+
+.thin-btn {
+	padding: 6px 15px;
+}
+
+.border-15 {
+	border-radius: 15px;
+}
+
+.resetBtn {
+	background: none;
+	color: #0381f7;
+}
+
+.info-toast-area {
+	position: relative;
+
+	.info-toast {
+		width: 320px;
+		background-color: #272727;
+		color: #fff;
+		padding: 20px;
+		position: absolute;
+		top: -143px;
+		left: 93px;
+		z-index: 100;
+		visibility: hidden;
+		opacity: 0;
+		transition: opacity 0.5s ease;
+
+		& i {
+			position: absolute;
+			width: 25px;
+			height: 25px;
+			display: inline-block;
+			bottom: -10px;
+			left: 13px;
+			z-index: 1;
+			background-color: #272727;
+			transform: rotate(45deg) skew(10deg, 26deg);
+		}
+	}
+
+	& .info-toast-icon {
+		font-size: 16px;
+		cursor: pointer;
+		position: absolute;
+		top: 7px;
+		left: 112px;
+
+	}
+
+	&:hover {
+		& .info-toast-icon {
+			color: orangered;
+		}
+
+		& .info-toast {
+			visibility: visible;
+			opacity: 1;
+		}
+	}
+}
